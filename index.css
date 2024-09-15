@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e5f3fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 10rem;
+}
+
+.umbrella {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+#infoi {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: -8px;
+    padding: 255px 170px;
+}
+
+#upload-logo {
+    width: 250%;
+    max-width: 35px;
+}
+
+.umbrella img {
+    width: 350px;
+}
+
+.loader {
+    width: 56.6px;
+    height: 62.4px;
+    display: none;
+    animation: rotation 4s infinite linear;
+}
+.small-loader {
+    display: none;
+    animation: rotation 4s infinite linear;
+}
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.details {
+    flex: 1;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.colors {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.color {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.color.active {
+    border: 2px solid #000;
+}
+
+.color.gray { background-color: #6f6e6b; }
+.color.darkblue { background-color: #102447; }
+.color.blue { background-color: #04a7cf; }
+.color.pink { background-color: #d34792; }
+.color.yellow { background-color: #f8d237; }
+.color.orange { background-color: #f7a33b; }
+.color.red { background-color: #ef4b5f; }
+
+.upload-box {
+    margin-top: 20px;
+}
+
+.upload-box button {
+    background-color: unset;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.file-name {
+    margin-top: 10px;
+    font-size: 14px;
+    color:  white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    background-color: #00b5e5;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.upload-btn:hover {
+    color: #007ea0;
+}
+
+.remove {
+    background-color: transparent;
+    border: none;
+    color: #00b5e5;
+    font-size: 25px;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.remove:hover {
+    color: #007ea0;
+}
+
+.file-input {
+    display: none;
+}
+.error-message {
+    color: #ff0000;
+    font-size: 14px;
+    margin-top: 10px;
+}
